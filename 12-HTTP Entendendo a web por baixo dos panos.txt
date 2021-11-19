@@ -1,0 +1,60 @@
+https://cursos.alura.com.br/formacao-html-e-css
+https://cursos.alura.com.br/course/http-fundamentos?preRequirementFrom=javascript-programando-na-linguagem-web
+
+
+1 - O QUE É HTTP? 
+A arquitetura Cliente-Servidor
+Um protocolo é um conjunto de regras
+HTTP é um protocolo que define as regras de comunicação entre cliente e servidor na internet.
+HTTP é o protocolo mais importante da Internet
+
+2 - A WEB SEGURA - HTTPS
+Por padrão, os dados são trafegados como texto puro na web.
+Apenas com HTTPS a Web é segura
+O protocolo HTTPS nada mais é do que o protocolo HTTP mais uma camada adicional de segurança, a TLS/SSL
+O tipo de criptografia de chave pública/chave privada
+O que são os certificados digitais
+Certificados possuem identidade e validade
+As chaves públicas estão no certificado, a chave privada fica apenas no servidor
+O que é uma autoridade certificadora
+O navegador utiliza a chave pública para criptografar os dados
+
+3 - ENDEREÇOS SOB SEU DOMÍNIO
+URL são os endereços da Web
+Uma URL começa com o protocolo (por exemplo https://) seguido pelo domínio (www.alura.com.br)
+Depois do domínio pode vir a porta, se não for definida é utilizada a porta padrão desse protocolo
+Após o domínio:porta, é especificado o caminho para um recurso (/course/introducao-html-css)
+Um recurso é algo concreto na aplicação que queremos acessar
+
+4 - O CLIENTE PEDE E O SERVIDOR RESPONDE
+O protocolo HTTP segue o modelo Requisição-Resposta
+Sempre o cliente inicia a comunicação
+Uma requisição precisa ter todas as informações para o servidor gerar a resposta
+HTTP é stateless, não mantém informações entre requisições
+As plataformas de desenvolvimento usam sessões para guardar informações entre requisições
+
+5 - DEPURANDO A REQUISIÇÃO HTTP
+Depuração de uma requisição HTTP
+O método HTTP GET, que é utilizado quando estamos pedindo alguma coisa, quando queremos receber algo
+Quando recebemos uma resposta, ela contém cabeçalhos, como Location
+Códigos de resposta HTTP, como 200, 301, 404 e 500, para analisar de fato o que aconteceu com a nossa requisição
+
+6 - PARÂMETROS DA REQUISIÇÃO
+O método GET é utilizado para a busca de informações e tem seus parâmetros listados na URL, indicados pela presença da interrogação (?) seguido de pares de chave e valor
+O método POST por outro lado é mais utilizado para criação de recursos, informações no servidor e envia seus dados no corpo da requisição
+
+7 - SERVIÇOS NA WEB COM REST
+REST é um padrão arquitetural para comunicações entre aplicações
+Ele aproveita a estrutura do HTTP
+Recursos são definidos via URI
+Operações com métodos HTTP(GET/POST/PUT/DELETE)
+Cabeçalhos(Accept/Content-Type) são usados para especificar as representações(JSON,XML,...)
+
+8 - HTTP2 - POR UMA WEB MAIS EFICIENTE
+O protocolo HTTP/2 traz diversas tecnologias para diminuir o tamanho das requisições.
+A tecnologia HPACK é especialista em comprimir os Headers da requisições/respostas HTTP, deixando as mais leves.
+No HTTP/2 o Gzip é nativo do protocolo.
+No HTTP/2 o uso do HTTPS é obrigatório, no HTTP/1.1 não
+No HTTP/2 os dados são trafegados em binário, no HTTP/1.1 eles são trafegados como texto.
+Os Headers Stateful permitem que apenas os cabeçalhos que mudem sejam enviados a cada requisição, economizando muita banda que seriam cabeçalhos repetidos.
+Com o Server Push no HTTP/2 o servidor pode empurrar certas respostas para o cliente antes mesmo delas serem requisitadas, economizando tempo
